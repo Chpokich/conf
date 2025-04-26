@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim' 
 Plug 'junegunn/vim-plug'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

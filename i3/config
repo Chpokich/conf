@@ -8,13 +8,13 @@
 set $mod Mod4
 font pango:LiberationMono Regular 8
 
-#gaps inner 6
-#gaps horizontal 5
-#gaps vertical 5
+#gaps inner 4
+#gaps horizontal 1
+#gaps vertical 1
 #for_window [class="Tilda"] floating enable
 
-for_window [class=".*"] border pixel 1
-for_window [class="kitty"] border pixel 0
+for_window [class=".*"] border pixel 5
+for_window [class="kitty"] border pixel 5
 
 exec pulseaudio -D
 exec --no-startup-id dex --autostart --environment i3
@@ -133,7 +133,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bar {
 	font pango:LiberationMono Regular 11
-        status_command i3status -c /home/user1/.config/i3status/i3status.conf
+        status_command i3status -c /home/user2/.config/i3status/i3status.conf
 	position top
 }
 
