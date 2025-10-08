@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo su
 user=$(whoami)
 
 sudo rm -rf /home/$user/.config/i3

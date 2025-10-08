@@ -16,19 +16,22 @@ font pango:LiberationMono Regular 8
 for_window [class=".*"] border pixel 5
 for_window [class="kitty"] border pixel 5
 
-exec pulseaudio -D
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
+#exec pulseaudio -D
+#exec --no-startup-id dex --autostart --environment i3
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id nm-applet
 exec --no-startup-id ~/.config/i3/lay.sh
-exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id xmodmap ~/.Xmodmap
+#exec --no-startup-id setxkbmap -option caps:nocaps
+#exec --no-startup-id xmodmap ~/.Xmodmap
+#exec --no-startup-id xmodmap -e "keycode 37 = Caps_Lock" 
 
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#exec --no-startup-id setxkbmap -option
+
+#set $refresh_i3status killall -SIGUSR1 i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 floating_modifier $mod
 bindsym $mod+Return exec kitty
@@ -41,9 +44,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 #bindsym Shift+z exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
 ## Clipboard Screenshots
-bindsym Ctrl+z exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+z exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+z exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+#bindsym Ctrl+z exec --no-startup-id maim | xclip -selection clipboard -t image/png
+#bindsym Ctrl+$mod+z exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+#bindsym Ctrl+Shift+z exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 bindsym $mod+q kill
 bindsym $mod+h focus left
@@ -55,6 +58,14 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+
+
+#change layout
+#exec --no-startup-id /usr/bin/setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
+#exec --no-startup-id /usr/bin/setxkbmap \
+#  -layout "us,ru" \
+#  -option "grp:ctrl_shift_toggle" 
+  #-option "caps:nocaps"
 
 #bindsym $mod+w split h
 
