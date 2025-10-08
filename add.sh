@@ -30,8 +30,8 @@ sudo cp -r i3status /home/$user/.config/
 sudo rm -f /home/$user/.vimrc
 sudo cp .vimrc /home/$user/
 
-sudo rm -rf /home/$user/.vim
-sudo cp -r .vim /home/$user/
+#sudo rm -rf /home/$user/.vim
+#sudo cp -r .vim /home/$user/
 
 sudo rm -rf /home/$user/.config/coc
 sudo cp -r coc /home/$user/.config/
@@ -47,8 +47,8 @@ sudo cp -r .oh-my-zsh /home/$user/
 sudo rm -f /root/.vimrc
 sudo cp .vimrc /root/
 
-sudo rm -rf /root/.vim
-sudo cp -r .vim /root/
+#sudo rm -rf /root/.vim
+#sudo cp -r .vim /root/
 
 sudo rm -rf /root/.config/coc
 sudo cp -r coc /root/.config/
