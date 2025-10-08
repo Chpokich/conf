@@ -7,7 +7,6 @@ sudo apt install -y \
 	zsh \
 	build-essential \
 	git \
-	nodejs \
 	npm \
 	python3 \
 	python3-pip \
@@ -16,6 +15,9 @@ sudo apt install -y \
 	fd-find \
 	unzip \
 	vim
+
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
 
 user=$(whoami)
 
