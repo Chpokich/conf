@@ -14,10 +14,12 @@ sudo apt install -y \
 	ripgrep \
 	fd-find \
 	unzip \
-	vim
+  kitty
 
+sudo add-apt-repository ppa:jonathonf/vim
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
+sudo apt install -y vim 
 
 user=$(whoami)
 
@@ -59,3 +61,4 @@ sudo cp .zshrc /root/
 sudo rm -rf /root/.oh-my-zsh
 sudo cp -r .oh-my-zsh /root/
 
+#then needed to use :PlugInstall inside vim
